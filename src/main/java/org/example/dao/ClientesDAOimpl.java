@@ -6,8 +6,8 @@ import java.sql.*;
 import java.util.*;
 
 public class ClientesDAOimpl implements ClientesDAO {
+    //conecction
     private final Connection connection;
-
     public ClientesDAOimpl(Connection connection) {
         this.connection = connection;
     }
@@ -60,7 +60,7 @@ public class ClientesDAOimpl implements ClientesDAO {
 
     @Override
     public void actualizar(Clientes clientes) {
-        String sql="UPDATE Clientes SET nombre=?, apellido=?, telefono=?, email=?, direccion=?";
+        String sql="UPDATE Clientes SET nombre=?, apellido=?, telefono=?, email=?, direccion=? WHERE cliente_id=?";
 
         try(PreparedStatement statement = connection.prepareStatement(sql)){
             statement.setString(1, clientes.getNombre());

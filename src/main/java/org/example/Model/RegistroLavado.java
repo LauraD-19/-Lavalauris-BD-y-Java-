@@ -5,6 +5,7 @@ import java.time.LocalTime;
 
 public class RegistroLavado {
 
+    private int registro_id;
     private int id_vehiculo;
     private int id_servicio;
     private LocalDate fechaLavado;
@@ -22,6 +23,14 @@ public class RegistroLavado {
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
         this.precioTotal = precioTotal;
+    }
+
+    public int getRegistro_id() {
+        return registro_id;
+    }
+
+    public void setRegistro_id(int registro_id) {
+        this.registro_id = registro_id;
     }
 
     public int getId_vehiculo() {
@@ -74,13 +83,13 @@ public class RegistroLavado {
 
     @Override
     public String toString() {
-        return "RegistroLavado{" +
-                "id_vehiculo=" + id_vehiculo +
+        return "--->" +
+                "Registro ID= "+registro_id+
+                ", id_vehiculo=" + id_vehiculo +
                 ", id_servicio=" + id_servicio +
                 ", fechaLavado=" + fechaLavado +
                 ", horaInicio=" + horaInicio +
                 ", horaFin=" + horaFin +
-                ", precioTotal=" + precioTotal +
-                '}';
+                ", precioTotal=" + precioTotal ;
     }
 }

@@ -8,7 +8,7 @@ public interface ClientesDAO {
     void crear(Clientes clientes);
     Clientes leer(int cliente_id);
     void actualizar(Clientes clientes);
-    void eliminar(int codigo);
+    void eliminar(int cliente_id);
     List<Clientes> listar();
 
 }

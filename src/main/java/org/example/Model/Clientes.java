@@ -74,7 +74,7 @@ public class Clientes {
     public String toString() {
         return "--->\n" +
                 "ID="+ cliente_id+'\''+
-                "nombre='" + nombre + '\'' +
+                ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", email='" + email + '\'' +

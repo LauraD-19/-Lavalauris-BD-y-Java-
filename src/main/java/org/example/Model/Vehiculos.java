@@ -2,6 +2,7 @@ package org.example.Model;
 
 public class Vehiculos {
 
+    private  int vehiculo_id;
     private int id_cliente;
     private String marca;
     private String modelo;
@@ -19,6 +20,14 @@ public class Vehiculos {
         this.placa = placa;
         this.color = color;
         this.tipo = tipo;
+    }
+
+    public int getVehiculo_id() {
+        return vehiculo_id;
+    }
+
+    public void setVehiculo_id(int vehiculo_id) {
+        this.vehiculo_id = vehiculo_id;
     }
 
     public int getId_cliente() {
@@ -71,13 +80,13 @@ public class Vehiculos {
 
     @Override
     public String toString() {
-        return "Vehiculos{" +
-                "id_cliente=" + id_cliente +
+        return "--->\n" +
+                "vehiculo ID= "+vehiculo_id+
+                ", cliente ID=" + id_cliente +'\'' +
                 ", marca='" + marca + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", placa='" + placa + '\'' +
                 ", color='" + color + '\'' +
-                ", tipo='" + tipo + '\'' +
-                '}';
+                ", tipo='" + tipo + '\'';
     }
 }

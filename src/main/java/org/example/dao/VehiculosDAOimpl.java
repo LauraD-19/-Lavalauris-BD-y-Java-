@@ -27,7 +27,7 @@ public class VehiculosDAOimpl implements VehiculosDAO {
             statement.setString(3, vehiculos.getModelo());
             statement.setString(4, vehiculos.getPlaca());
             statement.setString(5, vehiculos.getColor());
-            statement.setString(5, vehiculos.getTipo());
+            statement.setString(6, vehiculos.getTipo());
             statement.executeUpdate();
 
         }catch (SQLException e){
@@ -76,7 +76,8 @@ public class VehiculosDAOimpl implements VehiculosDAO {
             statement.setString(3, vehiculos.getModelo());
             statement.setString(4, vehiculos.getPlaca());
             statement.setString(5, vehiculos.getColor());
-            statement.setString(5, vehiculos.getTipo());
+            statement.setString(6, vehiculos.getTipo());
+            statement.setInt(7, vehiculos.getVehiculo_id());
             statement.executeUpdate();
 
         }catch (SQLException e){
@@ -116,7 +117,7 @@ public class VehiculosDAOimpl implements VehiculosDAO {
                         resultSet.getString("tipo")
                 );
 
-                vehiculos1.setVehiculo_id(resultSet.getInt("id_cliente"));
+                vehiculos1.setVehiculo_id(resultSet.getInt("vehiculo_id"));
                 vehiculos.add(vehiculos1);
             }
 

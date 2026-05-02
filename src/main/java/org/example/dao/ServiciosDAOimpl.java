@@ -59,6 +59,7 @@ public class ServiciosDAOimpl implements ServiciosDAO {
         try(PreparedStatement statement = connection.prepareStatement(sql)){
             statement.setString(1, servicios.getNombre());
             statement.setDouble(2, servicios.getPrecio());
+            statement.setInt(3, servicios.getServicio_id());
             statement.executeUpdate();
 
         }catch (SQLException e){

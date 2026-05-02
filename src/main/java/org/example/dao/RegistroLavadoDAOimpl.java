@@ -75,6 +75,7 @@ public class RegistroLavadoDAOimpl implements RegistroLavadoDAO{
             statement.setTime(4, java.sql.Time.valueOf(registroLavado.getHoraInicio()));//localtime
             statement.setTime(5, java.sql.Time.valueOf(registroLavado.getHoraFin()));//localtime
             statement.setDouble(6, registroLavado.getPrecioTotal());
+            statement.setInt(7, registroLavado.getRegistro_id());
             statement.executeUpdate();
 
         }catch (SQLException e){

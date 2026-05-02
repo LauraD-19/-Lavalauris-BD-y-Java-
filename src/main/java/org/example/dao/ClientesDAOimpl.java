@@ -68,6 +68,7 @@ public class ClientesDAOimpl implements ClientesDAO {
             statement.setString(3, clientes.getTelefono());
             statement.setString(4, clientes.getEmail());
             statement.setString(5, clientes.getDireccion());
+            statement.setInt(6, clientes.getCliente_id());
             statement.executeUpdate();
 
         }catch (SQLException e){

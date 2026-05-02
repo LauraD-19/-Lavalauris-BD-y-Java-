@@ -80,16 +80,15 @@ public class Main {
                                 case 3://actualizar
                                     System.out.print("ID del cliente a actualizar: ");
                                     int idAC = scanner.nextInt();
+                                    scanner.nextLine();
                                     Clientes clientes2 = clientesDAO.leer(idAC);
                                     if (clientes2 != null) {
-                                        scanner.nextLine();
                                         System.out.print("Nuevo nombre: ");
                                         clientes2.setNombre(scanner.nextLine());
                                         System.out.print("Nuevo apellido: ");
                                         clientes2.setApellido(scanner.nextLine());
                                         System.out.print("Nuevo telefono: ");
                                         clientes2.setTelefono(scanner.nextLine());
-                                        scanner.nextLine();
                                         System.out.print("Nuevo email: ");
                                         clientes2.setEmail(scanner.nextLine());
                                         System.out.print("Nueva direccion: ");
@@ -165,9 +164,9 @@ public class Main {
                                 case 3://actualizar
                                     System.out.print("ID del servicio a actualizar: ");
                                     int idAC = scanner.nextInt();
+                                    scanner.nextLine();
                                     Servicios servicios2 = serviciosDAO.leer(idAC);
                                     if (servicios2 != null) {
-                                        scanner.nextLine();
                                         System.out.print("Nuevo nombre: ");
                                         servicios2.setNombre(scanner.nextLine());
                                         System.out.print("Nuevo precio: ");
@@ -251,9 +250,9 @@ public class Main {
                                 case 3://actualizar
                                     System.out.print("ID del vehiculo a actualizar: ");
                                     int idAC = scanner.nextInt();
+                                    scanner.nextLine();
                                     Vehiculos vehiculos2 = vehiculosDAO.leer(idAC);
                                     if (vehiculos2 != null) {
-                                        scanner.nextLine();
                                         System.out.print("ID del cliente: ");
                                         vehiculos2.setId_cliente(scanner.nextInt());
                                         System.out.print("Nuevo marca: ");
@@ -349,13 +348,14 @@ public class Main {
                                 case 3://actualizar
                                     System.out.print("ID del registro a actualizar: ");
                                     int idAC = scanner.nextInt();
+                                    scanner.nextLine();
                                     RegistroLavado registroLavado2 = registroLavadoDAO.leer(idAC);
                                     if (registroLavado2 != null) {
-                                        scanner.nextLine();
                                         System.out.print("nuevo ID del vehiculo: ");
                                         registroLavado2.setId_vehiculo(scanner.nextInt());
                                         System.out.print("Nuevo ID de servicio: ");
                                         registroLavado2.setId_servicio(scanner.nextInt());
+                                        scanner.nextLine();
                                         System.out.print("Nueva fecha (yyyy-MM-dd): ");
                                         String fechalavado = scanner.nextLine();
                                         LocalDate fechaLavado3 = LocalDate.parse(fechalavado);
